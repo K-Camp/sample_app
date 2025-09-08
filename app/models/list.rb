@@ -1,4 +1,7 @@
 class List < ApplicationRecord
-  #Listモデルにtitleとbodyに加え画像を扱うためのimageカラムが追記されたかのように扱える
   has_one_attached :image
+
+  validates :title, presence: true
+  validates :body, presence: true
+  validates :image, presence: true
 end
