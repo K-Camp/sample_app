@@ -10,6 +10,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list.id)
     else
+      #エラーメッセージの場合はrender、それ以外はredirect_to
       render :new
     end
   end
